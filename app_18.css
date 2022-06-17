@@ -1,0 +1,24 @@
+@charset "utf-8";
+*{margin: 0px;padding: 0px;outline: none;text-decoration: none;list-style: none;box-sizing: border-box;}
+:is(::after,::before){margin: 0px;padding: 0px;box-sizing: border-box;}
+html, body{scroll-behavior: smooth;}
+body{min-height: 100vh;margin: 0px auto;font-family: Arial, Helvetica, sans-serif;}
+/* start header */
+body #header{padding:25px 0px;background-color: rgb(255, 111, 111);position: sticky;top: 0px;}
+body #header .navbar{max-width: 1440px;margin: 0px auto;width: 90%;}
+body #header .navbar nav .list{display: flex;justify-content: space-around;align-items: center;flex-wrap: wrap;}
+body #header .navbar nav .list li a{display: block; font-size: 17px;color: #fff;font-weight: bold;margin:0px 25px;cursor: pointer;}
+/* start main */
+    /* start section0 */
+body main section{padding:65px 50px;}
+body main section .container{max-width: 1250px;margin: 0px auto;}
+/* body main section .container .title, p{color: #000;} */
+body main section:nth-child(odd){background-color: rgb(255, 255, 255);}
+body main section:nth-child(odd) :is(.title, p){color:#000;}
+body main section:nth-child(even){background-color: rgb(37, 37, 37);}
+body main section:nth-child(even) :is(.title, p){color:#fff;}
+body main section .container p{text-align: justify;line-height: 25px;margin-top: 25px;font-size: 17px;}
+@media (max-width:700px){
+    body #header .navbar nav .list{flex-direction: column;}
+    body #header .navbar nav .list li a{margin: 10px 0px;}
+}
